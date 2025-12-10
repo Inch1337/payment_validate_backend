@@ -50,7 +50,7 @@ func (v *Visa) Pay(amount float64) error {
 }
 
 func (v *Visa) Validate() error {
-	return ValidateCardNumber(&Visa{})
+	return ValidateCardNumber(v)
 }
 
 // методы Crypto
@@ -80,7 +80,7 @@ func ValidateCardNumber(v *Visa) error {
 	if len(v.CardNumber) != 16 {
 		return errors.New("номер карты должен состоять из 16 цифр")
 	}
-	if strings.Contains(v.DataOfExpiry, "26") {
+	if !strings.Contains(v.DataOfExpiry, "26") {
 		return errors.New("срок действия карты истек") // доделать с помощью библиотеки с датами
 	}
 	return nil
