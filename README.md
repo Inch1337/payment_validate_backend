@@ -23,11 +23,12 @@ This is my first large project. The goal is to build a small payment system whil
 * ✅ Write documentation in English
 
 ### Planned
-
-* ❌ Move validation logic (email, card number, etc.) into a separate package
+* ❌ Add generics to Validator()
+* ❌ Don't use reflect in fabric
+* ✅ Move validation logic (email, card number, etc.) into a separate package
 * ❌ Add unit tests
 * ❌ Rebuild packages for more convenient imports (e.g. `import "github.com/inch1337/..."`)
-* ❌ Add PostgreSQL or MongoDB
+* ❌ Add PostgreSQL or MySQL
 * ❌ Rebuild the project as an API
 
 ## Notes

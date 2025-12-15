@@ -3,14 +3,10 @@ package validators
 import (
 	"errors"
 	"payment_backend/internal/payments"
-	"regexp"
+	"payment_backend/internal/validation"
 )
 
 type PayPalValidator struct{}
-
-var emailRegex = regexp.MustCompile(
-	`^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$`,
-)
 
 func (v *PayPalValidator) Validate(p payments.Payment) error {
 	pp, ok := p.(*payments.PayPal)
@@ -22,7 +18,7 @@ func (v *PayPalValidator) Validate(p payments.Payment) error {
 		return errors.New("user is required")
 	}
 
-	if !emailRegex.MatchString(pp.Email) {
+	if !validation.IsValidEmail(pp.Email) {
 		return errors.New("invalid email format")
 	}
 
