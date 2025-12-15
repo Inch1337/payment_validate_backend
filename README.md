@@ -1,20 +1,36 @@
-This is my first global project. I'm trying to create small payment system and learn new about creating ITproduct
+# Payment System (Learning Project)
 
-How to use?
-1. Download file from this github page
-2. 
+This is my first large project. The goal is to build a small payment system while learning how to create an IT product and improve my Go skills.
 
-Goals:
-✅ Use interfaces
-✅ Add 'regexp' package
-✅ Add factory
-✅ Add 'time' package 
-✅ Create packages
-✅ English text
-❌ Move validation for email, cardnumber etc. to another package
-❌ Add unit-tests
-❌ Rebuild packages for more convenient work: import("github.com/inch1337/...")
-❌ Add PostgresDB or MongoDB
-❌ Rebuild for API
-❌ ✅
+## How to Run
+
+1. Clone or download this repository.
+2. Run the application:
+
+   ```bash
+   go run cmd/app/main.go
+   ```
+
+## Project Goals
+
+### Completed
+
+* ✅ Use interfaces
+* ✅ Add the `regexp` package
+* ✅ Implement a factory pattern
+* ✅ Add the `time` package
+* ✅ Create internal packages
+* ✅ Write documentation in English
+
+### Planned
+
+* ❌ Move validation logic (email, card number, etc.) into a separate package
+* ❌ Add unit tests
+* ❌ Rebuild packages for more convenient imports (e.g. `import "github.com/inch1337/..."`)
+* ❌ Add PostgreSQL or MongoDB
+* ❌ Rebuild the project as an API
+
+## Notes
+
+This project is educational and under active development. The architecture and features may change as I learn and improve the codebase.
 
