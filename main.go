@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"log"
 	"regexp"
 	"strconv"
 )
@@ -31,13 +30,13 @@ func (c *CardValidator) Validate(p Payment) error {
 		return errors.New("номер карты должен состоять из 16 цифр")
 	}
 	// в будущем использовать библиотеку time для правильной валидации даты карты
-	cardData, err := strconv.Atoi(card.DataOfExpiry)
+	cardDate, err := strconv.Atoi(card.DateOfExpiry)
 
 	if err != nil {
-		log.Fatal("failed to convert string to integer:", err)
+		return errors.New("failed to convert string to integer")
 	}
 
-	if cardData >= 26 {
+	if cardDate >= 26 {
 		return errors.New("срок действия карты истек")
 	}
 
@@ -101,7 +100,7 @@ type PayPal struct {
 
 type Card struct {
 	CardNumber   string
-	DataOfExpiry string
+	DateOfExpiry string
 }
 
 type Crypto struct {
@@ -118,7 +117,7 @@ func (p *PayPal) Pay(amount float64) error {
 // методы Visa
 
 func (v *Card) Pay(amount float64) error {
-	fmt.Printf("Paid: %.2f via Visa to cardnumber %s\n", amount, v.CardNumber)
+	fmt.Printf("Paid: %.2f via Card to cardnumber %s\n", amount, v.CardNumber)
 	return nil
 }
 
@@ -141,7 +140,7 @@ func ProcessPayment(p Payment, v Validator, amount float64) error {
 func main() {
 	payments := []Payment{
 		&PayPal{User: "John", Email: "john@example.com"},
-		&Card{CardNumber: "1234567890123456", DataOfExpiry: "25"},
+		&Card{CardNumber: "1234567890123456", DateOfExpiry: "25"},
 		&Crypto{Wallet: "0xABC1234567890"},
 	}
 
