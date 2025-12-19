@@ -21,15 +21,23 @@ This is my first large project. The goal is to build a small payment system whil
 * ✅ Add the `time` package
 * ✅ Create internal packages
 * ✅ Write documentation in English
+* ✅ Move validation logic (email, card number, etc.) into a separate package
 
 ### Planned
-* ❌ Add generics to Validator()
-* ❌ Don't use reflect in fabric
-* ✅ Move validation logic (email, card number, etc.) into a separate package
-* ❌ Add unit tests
-* ❌ Rebuild packages for more convenient imports (e.g. `import "github.com/inch1337/..."`)
-* ❌ Add PostgreSQL or MySQL
-* ❌ Rebuild the project as an API
+
+* ❌ Remove reflect from factory 
+* ❌ Add unit tests 
+* ❌ Add context.Context
+* ❌ Improve error handling (sentinel errors)
+
+* ❌ Clean import paths (e.g. `import "github.com/inch1337/..."`)
+* ❌ Simple HTTP API
+* ❌ Logging abstraction
+
+* ❌ Generics
+* ❌ Database (PostgreSQL or MySQL)
+* ❌ ORM
+* ❌ Microservices
 
 ## Notes
 
