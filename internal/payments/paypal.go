@@ -7,7 +7,7 @@ type PayPal struct {
 	Email string
 }
 
-func (p *PayPal) Pay(amount float64) error {
-	fmt.Printf("Paid %.2f via PayPal (%s)\n", amount, p.Email)
+func (p *PayPal) Pay(amount int) error {
+	fmt.Printf("Paid %d via PayPal (%s)\n", amount/100, p.Email)
 	return nil
 }

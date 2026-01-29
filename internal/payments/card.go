@@ -7,7 +7,7 @@ type Card struct {
 	DateOfExpiry string // MM/YY
 }
 
-func (c *Card) Pay(amount float64) error {
-	fmt.Printf("Paid %.2f via Card %s\n", amount, c.CardNumber)
+func (c *Card) Pay(amount int) error {
+	fmt.Printf("Paid %d via Card %s\n", amount/100, c.CardNumber)
 	return nil
 }

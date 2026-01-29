@@ -9,9 +9,8 @@ import (
 func ProcessPayment(
 	p payments.Payment,
 	vf *factory.ValidatorFactory,
-	amount float64,
+	amount int,
 ) error {
-
 	validator := vf.Get(p)
 	if validator == nil {
 		return fmt.Errorf("no validator for payment type")
@@ -34,7 +33,7 @@ func main() {
 	}
 
 	for _, p := range paymentsList {
-		if err := ProcessPayment(p, vf, 100); err != nil {
+		if err := ProcessPayment(p, vf, 10000); err != nil {
 			fmt.Println("Error:", err)
 		} else {
 			fmt.Println("Payment successful")

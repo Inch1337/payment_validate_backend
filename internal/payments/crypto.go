@@ -6,7 +6,7 @@ type Crypto struct {
 	Wallet string
 }
 
-func (c *Crypto) Pay(amount float64) error {
-	fmt.Printf("Paid %.2f via Crypto wallet %s\n", amount, c.Wallet)
+func (c *Crypto) Pay(amount int) error {
+	fmt.Printf("Paid %d via Crypto wallet %s\n", amount/100, c.Wallet)
 	return nil
 }

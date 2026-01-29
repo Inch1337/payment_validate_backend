@@ -1,5 +1,5 @@
 package payments
 
 type Payment interface {
-	Pay(amount float64) error
+	Pay(amount int) error
 }

@@ -18,13 +18,7 @@ func (v *CardValidator) Validate(p payments.Payment) error {
 		return errors.New("card number must be 16 digits")
 	}
 
-	// ok, err := validation.IsExpired(card.DateOfExpiry)
-	// if err != nil {
-	// 	return err
-	// }else if ok{
-	// 	return errors.New("card expired")
-	// }
-	if err := validation.IsExpired(card.DateOfExpiry); err != nil{
+	if err := validation.IsExpired(card.DateOfExpiry); err != nil {
 		return err
 	}
 
