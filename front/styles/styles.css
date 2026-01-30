@@ -46,10 +46,21 @@ ol {
 }
 
 .main {
-
+  /* flex: 1; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  min-height: 400px;
 }
 
 .paid {
+  display: flex;
+  align-items: center;
+  width: 450px;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.paid__info {
   width: 420px;
 }
 
@@ -58,29 +69,38 @@ ol {
 }
 
 .paid__amount {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .payment-methods {
-
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 420px;
 }
 
 .payment-methods__item {
-
+  height: 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+  border-radius: 10px;
 }
 
 .payment-methods__link {
-
+  display: block;
+  height: 100%;
 }
 
 .payment-methods__card {
   display: flex;
   justify-content: space-between;
+  height: 100%;
+  align-items: center;
 }
 
 .payment-methods__info {
   display: flex;
-
+  align-items: center;
 }
 
 .payment-methods__logo {
@@ -88,7 +108,15 @@ ol {
   height: 40px;
 }
 
+.payment-methods__name {
+  padding-left: 10px;
+}
+
 .payment-methods__chevron {
   width: 40px;
   height: 40px;
+}
+
+.footer {
+  
 }
