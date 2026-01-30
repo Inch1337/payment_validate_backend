@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+html {
+  block-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.page {
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.main {
+
+}
+
+.paid {
+  width: 420px;
+}
+
+.paid__title {
+  padding-bottom: 15px;
+}
+
+.paid__amount {
+  margin-bottom: 30px;
+}
+
+.payment-methods {
+
+}
+
+.payment-methods__item {
+
+}
+
+.payment-methods__link {
+
+}
+
+.payment-methods__card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-methods__info {
+  display: flex;
+
+}
+
+.payment-methods__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.payment-methods__chevron {
+  width: 40px;
+  height: 40px;
+}

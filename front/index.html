@@ -10,41 +10,41 @@
 
   <body class="page">
     <header class="header">
-      <a href="" class="logo"></a>
+      <p class="header__logo"><a href="" class="header__logo-link">Демо-магазин</a></p>
     </header>
     <main class="main">
-      <!-- подумать над названием класса -->
       <section class="paid"> 
         <h1 class="paid__title">Демо-магазин</h1>
-        <p class="paid__payment-amount">100 ₽</p>
+        <p class="paid__amount">100 ₽</p>
+
         <ul class="payment-methods">
-          <li class="payment-methods__item payment-methods__item__paypal">
-            <!-- подумать над названием класса -->
-            <a class="">
-              <article>
-                <div>
-                  <img src="" alt="" class="payment-methods__item__paypal-logo">
-                  <p>PayPal</p>
+          <li class="payment-methods__item payment-methods__item--paypal">
+            <a class="payment-methods__link" href="#">
+              <article class="payment-methods__card">
+                <div class="payment-methods__info">
+                  <img src="./images/paypal-logo.png" alt="логотип PayPal" class="payment-methods__logo payment-methods__logo--paypal">
+                  <p class="payment-methods__name">PayPal</p>
                 </div>
-                <img src="./image/chevron-right-svgrepo-com.svg" alt="" class="payment-methods__chevron-right">
+                <img src="./images/chevron-right-svgrepo-com.svg" alt="" class="payment-methods__chevron">
               </article>
             </a>
           </li>
-          <li class="paid__payment-methods__item payment-methods__item__crypto">
-            <!-- подумать над названием класса -->
-            <a class="">
-              <article>
-                <div>
-                  <img src="" alt="" class="payment-methods__item__crypto-logo">
-                  <p>Криптовалюта</p>
+    
+          <li class="payment-methods__item payment-methods__item--crypto">
+            <a class="payment-methods__link" href="#">
+              <article class="payment-methods__card">
+                <div class="payment-methods__info">
+                  <img src="./images/crypto-logo.svg" alt="логотип криптовалюты" class="payment-methods__logo payment-methods__logo--crypto">
+                  <p class="payment-methods__name">Криптовалюта</p>
                 </div>
-                <img src="./image/chevron-right-svgrepo-com.svg" alt="" class="payment-methods__chevron-right">
+                <img src="./images/chevron-right-svgrepo-com.svg" alt="" class="payment-methods__chevron">
               </article>
             </a>
           </li>
         </ul>
       </section>
-    </main>
+    </main>    
+
     <footer class="footer">
       <p>Заплатив здесь, вы принимаете <a href="">условие сервиса</a></p>
     </footer>
